@@ -1,0 +1,63 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Get list of currently installed formulae and casks
+installed_formulae=$(brew list --formula)
+installed_casks=$(brew list --cask)
+
+# Install missing formulae and casks
+brew bundle --no-lock --file=/dev/stdin <<EOF
+{{ range .packages.darwin.brews -}}
+brew "{{ . }}"
+{{ end -}}
+{{ range .packages.darwin.casks -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
+
+# Function to check if a formula is a dependency
+is_dependency() {
+    local formula=$1
+    brew uses --installed "$formula" | grep -q .
+}
+
+# Remove formulae not in the list and not a dependency
+for formula in $installed_formulae; do
+    if ! grep -q "brew \"$formula\"" <<EOF
+{{ range .packages.darwin.brews -}}
+brew "{{ . }}"
+{{ end -}}
+EOF
+    then
+        if ! is_dependency "$formula"; then
+            echo "Removing formula: $formula"
+            brew uninstall --force "$formula"
+        else
+            echo "Keeping $formula as it's a dependency"
+        fi
+    fi
+done
+
+# Function to check if a cask is a dependency
+is_cask_dependency() {
+    local cask=$1
+    brew deps --cask --installed | grep -q "$cask"
+}
+
+# Remove casks not in the list and not a dependency
+for cask in $installed_casks; do
+    if ! grep -q "cask \"$cask\"" <<EOF
+{{ range .packages.darwin.casks -}}
+cask "{{ . }}"
+{{ end -}}
+EOF
+    then
+        if ! is_cask_dependency "$cask"; then
+            echo "Removing cask: $cask"
+            brew uninstall --cask --zap --force "$cask"
+        else
+            echo "Keeping $cask as it's a dependency"
+        fi
+    fi
+done
+{{ end -}}
