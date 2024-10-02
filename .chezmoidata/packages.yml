@@ -25,6 +25,7 @@ packages:
     - 'forklift'
     - 'iina'
     - 'ledger-live'
+    - 'nikitabobko/tap/aerospace'
     - 'proton-mail'
     - 'proton-pass'
     - 'protonvpn'
@@ -35,5 +36,3 @@ packages:
     - 'telegram-desktop'
     - 'utm'
     - 'visual-studio-code'
-    taps:
-    - 'nikitabobko/tap/aerospace'
