@@ -1,5 +1,5 @@
 import = [ 
-    "~/.config/alacritty/aura.toml"
+    "~/.config/alacritty/catppuccin_mocha.toml"
 ]
 
 [env]
@@ -12,5 +12,12 @@ padding.y = 10
 option_as_alt = "Both"
 
 [font]
-normal.family = "MesloLGS Nerd Font Mono"
+normal.family = "JetBrainsMono Nerd Font"
+normal.style = "Regular"
+bold.family = "JetBrainsMono Nerd Font"
+bold.style = "Bold"
+italic.family = "JetBrainsMono Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "JetBrainsMono Nerd Font"
+bold_italic.style = "BoldItalic"
 size = 14
