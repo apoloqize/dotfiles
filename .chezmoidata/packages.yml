@@ -2,6 +2,7 @@ packages:
   darwin:
     brews:
     - 'ansible'
+    - 'argocd'
     - 'btop'
     - 'chezmoi'
     - 'cilium-cli'
