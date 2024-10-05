@@ -9,6 +9,7 @@ packages:
     - 'helm'
     - 'k9s'
     - 'powerlevel10k'
+    - 'sshpass'
     - 'tree'
     - 'zellij'
     - 'zsh-autosuggestions'
