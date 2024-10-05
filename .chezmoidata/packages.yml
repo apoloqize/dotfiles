@@ -5,6 +5,7 @@ packages:
     - 'btop'
     - 'chezmoi'
     - 'git'
+    - 'just'
     - 'kubernetes-cli'
     - 'helm'
     - 'k9s'
