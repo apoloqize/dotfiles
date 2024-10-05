@@ -4,6 +4,7 @@ packages:
     - 'ansible'
     - 'btop'
     - 'chezmoi'
+    - 'cilium-cli'
     - 'git'
     - 'just'
     - 'kubernetes-cli'
