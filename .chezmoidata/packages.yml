@@ -38,6 +38,7 @@ packages:
     - 'raycast'
     - 'signal'
     - 'tailscale'
+    - 'teamspeak-client'
     - 'telegram-desktop'
     - 'utm'
     - 'visual-studio-code'
