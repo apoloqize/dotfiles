@@ -5,13 +5,22 @@
 installed_formulae=$(brew list --formula)
 installed_casks=$(brew list --cask)
 
+# Check if the current machine is a Mac Mini
+is_mac_mini=$(sysctl -n hw.model | grep -q "^Macmini" && echo "true" || echo "false")
+
 # Install missing formulae and casks
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew "{{ . }}"
 {{ end -}}
 {{ range .packages.darwin.casks -}}
+{{ if ne . "betterdisplay" -}}
 cask "{{ . }}"
+{{ else -}}
+{{ `{{ if eq $is_mac_mini "true" }}` }}
+cask "betterdisplay"
+{{ `{{ end }}` }}
+{{ end -}}
 {{ end -}}
 EOF
 
@@ -48,7 +57,13 @@ is_cask_dependency() {
 for cask in $installed_casks; do
     if ! grep -q "cask \"$cask\"" <<EOF
 {{ range .packages.darwin.casks -}}
+{{ if ne . "betterdisplay" -}}
 cask "{{ . }}"
+{{ else -}}
+{{ `{{ if eq $is_mac_mini "true" }}` }}
+cask "betterdisplay"
+{{ `{{ end }}` }}
+{{ end -}}
 {{ end -}}
 EOF
     then
