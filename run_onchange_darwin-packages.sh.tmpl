@@ -24,55 +24,58 @@ cask "betterdisplay"
 {{ end -}}
 EOF
 
-# Function to check if a formula is a dependency
-is_dependency() {
-    local formula=$1
-    brew uses --installed "$formula" | grep -q .
-}
+# Start sketchybar service
+brew services start sketchybar
 
-# Remove formulae not in the list and not a dependency
-for formula in $installed_formulae; do
-    if ! grep -q "brew \"$formula\"" <<EOF
-{{ range .packages.darwin.brews -}}
-brew "{{ . }}"
-{{ end -}}
-EOF
-    then
-        if ! is_dependency "$formula"; then
-            echo "Removing formula: $formula"
-            brew uninstall --force "$formula"
-        else
-            echo "Keeping $formula as it's a dependency"
-        fi
-    fi
-done
-
-# Function to check if a cask is a dependency
-is_cask_dependency() {
-    local cask=$1
-    brew deps --cask --installed | grep -q "$cask"
-}
-
-# Remove casks not in the list and not a dependency
-for cask in $installed_casks; do
-    if ! grep -q "cask \"$cask\"" <<EOF
-{{ range .packages.darwin.casks -}}
-{{ if ne . "betterdisplay" -}}
-cask "{{ . }}"
-{{ else -}}
-{{ `{{ if eq $is_mac_mini "true" }}` }}
-cask "betterdisplay"
-{{ `{{ end }}` }}
-{{ end -}}
-{{ end -}}
-EOF
-    then
-        if ! is_cask_dependency "$cask"; then
-            echo "Removing cask: $cask"
-            brew uninstall --cask --zap --force "$cask"
-        else
-            echo "Keeping $cask as it's a dependency"
-        fi
-    fi
-done
+## Function to check if a formula is a dependency
+#is_dependency() {
+#    local formula=$1
+#    brew uses --installed "$formula" | grep -q .
+#}
+#
+## Remove formulae not in the list and not a dependency
+#for formula in $installed_formulae; do
+#    if ! grep -q "brew \"$formula\"" <<EOF
+#{{ range .packages.darwin.brews -}}
+#brew "{{ . }}"
+#{{ end -}}
+#EOF
+#    then
+#        if ! is_dependency "$formula"; then
+#            echo "Removing formula: $formula"
+#            brew uninstall --force "$formula"
+#        else
+#            echo "Keeping $formula as it's a dependency"
+#        fi
+#    fi
+#done
+#
+## Function to check if a cask is a dependency
+#is_cask_dependency() {
+#    local cask=$1
+#    brew deps --cask --installed | grep -q "$cask"
+#}
+#
+## Remove casks not in the list and not a dependency
+#for cask in $installed_casks; do
+#    if ! grep -q "cask \"$cask\"" <<EOF
+#{{ range .packages.darwin.casks -}}
+#{{ if ne . "betterdisplay" -}}
+#cask "{{ . }}"
+#{{ else -}}
+#{{ `{{ if eq $is_mac_mini "true" }}` }}
+#cask "betterdisplay"
+#{{ `{{ end }}` }}
+#{{ end -}}
+#{{ end -}}
+#EOF
+#    then
+#        if ! is_cask_dependency "$cask"; then
+#            echo "Removing cask: $cask"
+#            brew uninstall --cask --zap --force "$cask"
+#        else
+#            echo "Keeping $cask as it's a dependency"
+#        fi
+#    fi
+#done
 {{ end -}}
