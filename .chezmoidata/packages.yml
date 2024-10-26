@@ -24,6 +24,7 @@ packages:
     - '1password-cli'
     - 'alacritty'
     - 'alt-tab'
+    - 'betterdiscord-installer'
     - 'discord'
     - 'docker'
     - 'firefox'
