@@ -102,8 +102,8 @@ done
 #           --subscribe battery system_woke power_source_change
 
 sketchybar --add alias "Control Center,Clock" right \
-           --add alias "Tailscale,Item-0" right
-
+           --add alias "Tailscale,Item-0" right \
+           --add alias "TeamSpeak 3,Item-0" right
 
 
 #~ ❯ sketchybar --query default_menu_items
