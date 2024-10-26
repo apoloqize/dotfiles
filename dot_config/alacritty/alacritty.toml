@@ -20,5 +20,5 @@ size = 14
 
 [general]
 import = [
-    "~/.config/alacritty/catppuccin_mocha.toml"
+    "~/.config/alacritty/gruvbox_material_medium_dark.toml"
 ]
