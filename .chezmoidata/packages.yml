@@ -6,6 +6,7 @@ packages:
     - 'btop'
     - 'chezmoi'
     - 'cilium-cli'
+    - 'felixkratz/formulae/sketchybar'
     - 'git'
     - 'go'
     - 'just'
