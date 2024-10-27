@@ -1,0 +1,83 @@
+# Colors (macOS Dark Mode)
+
+[colors.primary]
+background = '#1E1E1E' # base
+foreground = '#FFFFFF' # text
+dim_foreground = '#989898' # dimmed text
+bright_foreground = '#FFFFFF' # bright text
+
+# Cursor colors
+[colors.cursor]
+text = '#1E1E1E' # base
+cursor = '#FFFFFF' # white
+
+[colors.vi_mode_cursor]
+text = '#1E1E1E' # base
+cursor = '#0A84FF' # blue
+
+# Search colors
+[colors.search.matches]
+foreground = '#1E1E1E' # base
+background = '#FFD60A' # yellow
+
+[colors.search.focused_match]
+foreground = '#1E1E1E' # base
+background = '#32D74B' # green
+
+[colors.footer_bar]
+foreground = '#1E1E1E' # base
+background = '#989898' # secondary text
+
+# Keyboard regex hints
+[colors.hints.start]
+foreground = '#1E1E1E' # base
+background = '#FF9F0A' # orange
+
+[colors.hints.end]
+foreground = '#1E1E1E' # base
+background = '#989898' # secondary text
+
+# Selection colors
+[colors.selection]
+text = '#1E1E1E' # base
+background = '#0A84FF' # blue
+
+# Normal colors
+[colors.normal]
+black = '#2D2D2D' # surface1
+red = '#FF453A' # red
+green = '#32D74B' # green
+yellow = '#FFD60A' # yellow
+blue = '#0A84FF' # blue
+magenta = '#BF5AF2' # pink
+cyan = '#5AC8F5' # teal
+white = '#989898' # subtext1
+
+# Bright colors
+[colors.bright]
+black = '#666666' # surface2
+red = '#FF6961' # red
+green = '#66D880' # green
+yellow = '#FFE033' # yellow
+blue = '#34A2FF' # blue
+magenta = '#CF82F5' # pink
+cyan = '#76D0F5' # teal
+white = '#FFFFFF' # subtext0
+
+# Dim colors
+[colors.dim]
+black = '#1E1E1E' # surface1
+red = '#CC3629' # red
+green = '#28AC3B' # green
+yellow = '#CC9900' # yellow
+blue = '#0066CC' # blue
+magenta = '#9933CC' # pink
+cyan = '#4D99B3' # teal
+white = '#666666' # subtext1
+
+# Indexed Colors
+[colors.indexed_colors]
+# If you want to add additional color indexes
+# Example:
+# { index = 16, color = '#FF9F0A' } # orange
+# { index = 17, color = '#FF375F' } # pink
