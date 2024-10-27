@@ -42,6 +42,7 @@ packages:
     - 'protonvpn'
     - 'qbittorrent'
     - 'raycast'
+    - 'sf-symbols'
     - 'signal'
     - 'tailscale'
     - 'teamspeak-client'
