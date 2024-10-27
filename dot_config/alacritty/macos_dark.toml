@@ -1,76 +1,48 @@
-# Colors (macOS Dark Mode)
-
 [colors.primary]
-background = '#1E1E1E' # base
-foreground = '#FFFFFF' # text
-dim_foreground = '#989898' # dimmed text
-bright_foreground = '#FFFFFF' # bright text
+background = '#1E1E1E'
+foreground = '#FFFFFF'
 
-# Cursor colors
-[colors.cursor]
-text = '#1E1E1E' # base
-cursor = '#FFFFFF' # white
+# Normal colors (Dark Default values)
+[colors.normal]
+black = '#000000'
+red = '#FF6961'      # R255 G69 B58
+green = '#32D74B'    # R50 G215 B75
+yellow = '#FFD60A'   # R255 G214 B10
+blue = '#0A84FF'     # R10 G132 B255
+magenta = '#BF5AF2'  # R191 G90 B242
+cyan = '#5AC8F5'     # R90 G200 B245
+white = '#989898'    # R152 G152 B157
 
-[colors.vi_mode_cursor]
-text = '#1E1E1E' # base
-cursor = '#0A84FF' # blue
-
-# Search colors
-[colors.search.matches]
-foreground = '#1E1E1E' # base
-background = '#FFD60A' # yellow
-
-[colors.search.focused_match]
-foreground = '#1E1E1E' # base
-background = '#32D74B' # green
-
-[colors.footer_bar]
-foreground = '#1E1E1E' # base
-background = '#989898' # secondary text
-
-# Keyboard regex hints
-[colors.hints.start]
-foreground = '#1E1E1E' # base
-background = '#FF9F0A' # orange
-
-[colors.hints.end]
-foreground = '#1E1E1E' # base
-background = '#989898' # secondary text
+# Bright colors (slightly lighter variations)
+[colors.bright]
+black = '#666666'
+red = '#FF453A'      # R255 G69 B58 (brighter)
+green = '#66D880'    # R50 G215 B75 (brighter)
+yellow = '#FFE033'   # R255 G214 B10 (brighter)
+blue = '#34A2FF'     # R10 G132 B255 (brighter)
+magenta = '#CF82F5'  # R191 G90 B242 (brighter)
+cyan = '#76D0F5'     # R106 G196 B220 (brighter)
+white = '#FFFFFF'
 
 # Selection colors
 [colors.selection]
-text = '#1E1E1E' # base
-background = '#0A84FF' # blue
+text = '#FFFFFF'
+background = '#0A84FF'   # System Blue
 
-# Normal colors
-[colors.normal]
-black = '#2D2D2D' # surface1
-red = '#FF453A' # red
-green = '#32D74B' # green
-yellow = '#FFD60A' # yellow
-blue = '#0A84FF' # blue
-magenta = '#BF5AF2' # pink
-cyan = '#5AC8F5' # teal
-white = '#989898' # subtext1
+# Cursor colors
+[colors.cursor]
+text = '#1E1E1E'
+cursor = '#FFFFFF'
 
-# Bright colors
-[colors.bright]
-black = '#666666' # surface2
-red = '#FF6961' # red
-green = '#66D880' # green
-yellow = '#FFE033' # yellow
-blue = '#34A2FF' # blue
-magenta = '#CF82F5' # pink
-cyan = '#76D0F5' # teal
-white = '#FFFFFF' # subtext0
+[colors.search.matches]
+foreground = '#000000'
+background = '#FFD60A'   # System Yellow
 
-# Dim colors
-[colors.dim]
-black = '#1E1E1E' # surface1
-red = '#CC3629' # red
-green = '#28AC3B' # green
-yellow = '#CC9900' # yellow
-blue = '#0066CC' # blue
-magenta = '#9933CC' # pink
-cyan = '#4D99B3' # teal
-white = '#666666' # subtext1
+[colors.search.focused_match]
+foreground = '#000000'
+background = '#32D74B'   # System Green
+
+# Vi mode cursor
+[colors.vi_mode_cursor]
+text = '#1E1E1E'
+cursor = '#0A84FF'       # System Blue
