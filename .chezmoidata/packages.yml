@@ -18,6 +18,7 @@ packages:
     - 'ripgrep'
     - 'sketchybar'
     - 'sshpass'
+    - 'switchaudio-osx'
     - 'tree'
     - 'zellij'
     - 'zsh-autosuggestions'
