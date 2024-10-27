@@ -62,7 +62,7 @@ outer.left =       0
 outer.bottom =     0
 outer.right =      0
 outer.top = [
-{ monitor."Built-in" = 4 },
+{ monitor."Built-in" = 0 },
 { monitor."LG ULTRAGEAR+" = 38 },
 38
 ]
