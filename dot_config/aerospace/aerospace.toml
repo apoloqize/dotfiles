@@ -63,8 +63,8 @@ outer.bottom =     0
 outer.right =      0
 outer.top = [
 { monitor."Built-in" = 4 },
-{ monitor."LG ULTRAGEAR+" = 32 },
-32
+{ monitor."LG ULTRAGEAR+" = 38 },
+38
 ]
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
