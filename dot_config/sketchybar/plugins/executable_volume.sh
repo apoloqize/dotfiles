@@ -6,6 +6,7 @@
 DEVICE=$(SwitchAudioSource -c)
 if [[ "$DEVICE" == *"JDS Labs Element III"* ]]; then
   sketchybar --set "$NAME" icon="􀊩" label="100%"
+  exit 0
 fi
 
 if [ "$SENDER" = "volume_change" ]; then
