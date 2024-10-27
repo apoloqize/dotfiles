@@ -95,7 +95,7 @@ done
 sketchybar --add item clock right \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
            --add item audio_device right \
-           --set device update_freq=5 script="$PLUGIN_DIR/audio_device.sh" \
+           --set audio_device update_freq=5 script="$PLUGIN_DIR/audio_device.sh" \
            --add item battery right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change

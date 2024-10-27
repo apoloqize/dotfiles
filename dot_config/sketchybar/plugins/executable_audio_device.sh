@@ -7,9 +7,9 @@
 #    exit 0
 #fi
 
-DEVICE=$(SwitchAudioSource -c)
+audioDevice="$(SwitchAudioSource -c)"
 
-case "$DEVICE" in
+case "${audioDevice}" in
   *"Shure MV7"*) ICON="􀑫"  # Microphone
   ;;
   *"LG ULTRAGEAR+"*) ICON="􀢹"  # High volume speaker
