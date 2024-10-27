@@ -16,6 +16,7 @@ packages:
     - 'neovim'
     - 'powerlevel10k'
     - 'ripgrep'
+    - 'sketchybar'
     - 'sshpass'
     - 'tree'
     - 'zellij'
