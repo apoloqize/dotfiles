@@ -74,10 +74,3 @@ blue = '#0066CC' # blue
 magenta = '#9933CC' # pink
 cyan = '#4D99B3' # teal
 white = '#666666' # subtext1
-
-# Indexed Colors
-[colors.indexed_colors]
-# If you want to add additional color indexes
-# Example:
-# { index = 16, color = '#FF9F0A' } # orange
-# { index = 17, color = '#FF375F' } # pink
