@@ -18,6 +18,9 @@ case "${audioDevice}" in
   ;;
   *"Mac mini Speakers"*) ICON="􀪰"  # Medium volume speaker
   ;;
+  *"Florent’s AirPods Pro"*) ICON="􀪷"  # Medium volume speaker
+  ;;
+
   *) ICON="􀊣"  # Default/muted speaker
   ;;
 esac
