@@ -1,48 +1,36 @@
 [colors.primary]
 background = '#1E1E1E'
-foreground = '#FFFFFF'
+foreground = '#DFDFE0'  # Slightly off-white for better eye comfort
 
-# Normal colors (Dark Default values)
+# Normal colors (Dark Default values - more muted)
 [colors.normal]
-black = '#000000'
-red = '#FF6961'      # R255 G69 B58
-green = '#32D74B'    # R50 G215 B75
-yellow = '#FFD60A'   # R255 G214 B10
-blue = '#0A84FF'     # R10 G132 B255
-magenta = '#BF5AF2'  # R191 G90 B242
-cyan = '#5AC8F5'     # R90 G200 B245
-white = '#989898'    # R152 G152 B157
+black = '#2D2D2D'
+red = '#FF5F57'        # Closer to macOS red
+green = '#28C840'      # More muted green
+yellow = '#FEBC2E'     # More muted yellow
+blue = '#4AA9FF'       # Softer blue
+magenta = '#BD5BF3'    # Softer magenta
+cyan = '#5AC4FF'       # Softer cyan
+white = '#989898'      # System gray
 
-# Bright colors (slightly lighter variations)
+# Bright colors
 [colors.bright]
 black = '#666666'
-red = '#FF453A'      # R255 G69 B58 (brighter)
-green = '#66D880'    # R50 G215 B75 (brighter)
-yellow = '#FFE033'   # R255 G214 B10 (brighter)
-blue = '#34A2FF'     # R10 G132 B255 (brighter)
-magenta = '#CF82F5'  # R191 G90 B242 (brighter)
-cyan = '#76D0F5'     # R106 G196 B220 (brighter)
+red = '#FF6961'
+green = '#32D74B'
+yellow = '#FFD60A'
+blue = '#0A84FF'
+magenta = '#BF5AF2'
+cyan = '#76D0F5'
 white = '#FFFFFF'
 
-# Selection colors
-[colors.selection]
-text = '#FFFFFF'
-background = '#0A84FF'   # System Blue
-
-# Cursor colors
-[colors.cursor]
-text = '#1E1E1E'
-cursor = '#FFFFFF'
-
-[colors.search.matches]
-foreground = '#000000'
-background = '#FFD60A'   # System Yellow
-
-[colors.search.focused_match]
-foreground = '#000000'
-background = '#32D74B'   # System Green
-
-# Vi mode cursor
-[colors.vi_mode_cursor]
-text = '#1E1E1E'
-cursor = '#0A84FF'       # System Blue
+# Dim colors (for better contrast in dark mode)
+[colors.dim]
+black = '#1E1E1E'
+red = '#CC3629'
+green = '#28AC3B'
+yellow = '#CC9900'
+blue = '#0066CC'
+magenta = '#9933CC'
+cyan = '#4D99B3'
+white = '#666666'
