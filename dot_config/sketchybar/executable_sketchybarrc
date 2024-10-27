@@ -94,6 +94,9 @@ done
 
 sketchybar --add item clock right \
            --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
+           --add item volume right \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change \
            --add item audio_device right \
            --set audio_device update_freq=5 script="$PLUGIN_DIR/audio_device.sh" \
            --add item battery right \
