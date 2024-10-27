@@ -27,7 +27,7 @@ default=(
   icon.color=0xffd4be98
   label.color=0xffd4be98
   icon.padding_left=5
-  icon.padding_right=0
+  icon.padding_right=5
   label.padding_left=5
   label.padding_right=5
 )
