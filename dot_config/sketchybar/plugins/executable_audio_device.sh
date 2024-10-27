@@ -14,7 +14,7 @@ case "${audioDevice}" in
   ;;
   *"LG ULTRAGEAR+"*) ICON="􀢹"  # High volume speaker
   ;;
-  *"JDS Labs Element III"*) ICON="􂛋"  # Headphones
+  *"JDS Labs Element III"*) ICON="􀑈"  # Headphones
   ;;
   *"Mac mini Speakers"*) ICON="􀪰"  # Medium volume speaker
   ;;
