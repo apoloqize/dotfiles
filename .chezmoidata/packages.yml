@@ -16,7 +16,6 @@ packages:
     - 'powerlevel10k'
     - 'ripgrep'
     - 'sshpass'
-    - 'switchaudio-osx'
     - 'tree'
     - 'zellij'
     - 'zsh-autosuggestions'
