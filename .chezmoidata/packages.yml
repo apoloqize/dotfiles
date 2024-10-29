@@ -48,3 +48,4 @@ packages:
     - 'telegram-desktop'
     - 'utm'
     - 'visual-studio-code'
+    - 'wezterm'
