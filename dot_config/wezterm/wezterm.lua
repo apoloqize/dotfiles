@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 config.colors = {
     -- Default colors
     foreground = "#e6edf3",
-    background = "#010409",  -- Much darker to account for terminal rendering
+    background = "#0D1117",  -- Much darker to account for terminal rendering
     cursor_bg = "#e6edf3",
     cursor_border = "#e6edf3",
     cursor_fg = "#010409",
