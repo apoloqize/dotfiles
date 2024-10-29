@@ -15,7 +15,6 @@ packages:
     - 'neovim'
     - 'powerlevel10k'
     - 'ripgrep'
-    - 'sketchybar'
     - 'sshpass'
     - 'switchaudio-osx'
     - 'tree'
