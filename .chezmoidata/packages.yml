@@ -16,6 +16,7 @@ packages:
     - 'powerlevel10k'
     - 'ripgrep'
     - 'sshpass'
+    - 'tmux'
     - 'tree'
     - 'zsh-autosuggestions'
     - 'zsh-syntax-highlighting'
