@@ -19,6 +19,7 @@ packages:
     - 'sshpass'
     - 'tmux'
     - 'tree'
+    - 'wget'
     - 'zsh-autosuggestions'
     - 'zsh-syntax-highlighting'
     casks:
