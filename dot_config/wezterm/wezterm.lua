@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 config.colors = {
     -- Default colors
     foreground = "#e6edf3",
-    background = "#0D1117",  -- Much darker to account for terminal rendering
+    background = "#0A0D10",  -- Much darker to account for terminal rendering
     cursor_bg = "#e6edf3",
     cursor_border = "#e6edf3",
     cursor_fg = "#010409",
@@ -45,5 +45,6 @@ config.font_size = 14
 
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
+config.window_close_confirmation = "NeverPrompt"
 -- and finally, return the configuration to wezterm
 return config
