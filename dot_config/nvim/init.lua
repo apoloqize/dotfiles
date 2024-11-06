@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -256,6 +256,19 @@ require('lazy').setup({
     },
   },
 
+  -- GitHub Theme
+  {
+    'projekt0n/github-nvim-theme',
+    name = 'github-theme',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('github-theme').setup({
+        -- ...
+      })
+      vim.cmd('colorscheme github_dark_default')
+    end,
+  },
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
