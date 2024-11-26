@@ -178,7 +178,7 @@ alt-shift-l = ['join-with right', 'mode main']
 ##
 
 [[on-window-detected]]
-if.app-id = 'org.alacritty'
+if.app-id = 'com.github.wez.wezterm'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
@@ -207,4 +207,16 @@ run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'net.rpcs3.rpcs3'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.binarynights.ForkLift'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.colliderli.iina'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.winamax.poker'
 run = 'layout floating'
