@@ -220,3 +220,11 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.winamax.poker'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'Riot Client'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'League of Legends'
+run = 'layout floating'
