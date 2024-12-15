@@ -29,6 +29,7 @@ packages:
     - 'betterdiscord-installer'
     - 'discord'
     - 'docker'
+    - 'eloston-chromium'
     - 'firefox'
     - 'font-jetbrains-mono-nerd-font'
     - 'font-meslo-lg-nerd-font'
