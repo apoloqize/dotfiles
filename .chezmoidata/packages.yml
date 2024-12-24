@@ -37,6 +37,7 @@ packages:
     - 'iina'
     - 'ledger-live'
     - 'nikitabobko/tap/aerospace'
+    - 'plex'
     - 'proton-mail'
     - 'proton-pass'
     - 'protonvpn'
