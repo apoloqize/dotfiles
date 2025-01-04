@@ -6,7 +6,6 @@ packages:
     - 'btop'
     - 'chezmoi'
     - 'cilium-cli'
-    - 'exercism'
     - 'git'
     - 'go'
     - 'helm'
@@ -14,6 +13,7 @@ packages:
     - 'k9s'
     - 'kubernetes-cli'
     - 'neovim'
+    - 'node'
     - 'powerlevel10k'
     - 'ripgrep'
     - 'sshpass'
@@ -25,7 +25,6 @@ packages:
     casks:
     - '1password'
     - '1password-cli'
-    - 'alt-tab'
     - 'discord'
     - 'docker'
     - 'eloston-chromium'
@@ -50,4 +49,3 @@ packages:
     - 'telegram-desktop'
     - 'utm'
     - 'visual-studio-code'
-    - 'wezterm'
