@@ -25,6 +25,7 @@ packages:
     casks:
     - '1password'
     - '1password-cli'
+    - 'claude'
     - 'discord'
     - 'docker'
     - 'eloston-chromium'
@@ -46,6 +47,6 @@ packages:
     - 'signal'
     - 'tailscale'
     - 'teamspeak-client'
-    - 'telegram-desktop'
+    - 'telegram'
     - 'utm'
     - 'visual-studio-code'
