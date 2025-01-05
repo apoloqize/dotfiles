@@ -6,6 +6,7 @@ packages:
     - 'btop'
     - 'chezmoi'
     - 'cilium-cli'
+    - 'ffmpeg'
     - 'git'
     - 'go'
     - 'helm'
