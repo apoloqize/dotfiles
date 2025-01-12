@@ -54,5 +54,6 @@ packages:
     - 'tailscale'
     - 'teamspeak-client'
     - 'telegram'
+    - 'tor-browser'
     - 'utm'
     - 'visual-studio-code'
