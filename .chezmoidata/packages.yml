@@ -8,6 +8,7 @@ packages:
     - 'cilium-cli'
     - 'doctl'
     - 'ffmpeg'
+    - 'gh'
     - 'git'
     - 'go'
     - 'helm'
