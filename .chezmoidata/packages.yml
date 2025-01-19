@@ -27,6 +27,7 @@ packages:
     - 'uv'
     - 'velero'
     - 'wget'
+    - 'yt-dlp'
     - 'zsh-autosuggestions'
     - 'zsh-syntax-highlighting'
     casks:
