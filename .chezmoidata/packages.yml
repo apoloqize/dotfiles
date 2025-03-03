@@ -46,6 +46,7 @@ packages:
     - 'ledger-live'
     - 'netdownloadhelpercoapp'
     - 'plex'
+    - 'proton-drive'
     - 'proton-mail'
     - 'proton-pass'
     - 'protonvpn'
