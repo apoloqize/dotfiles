@@ -1,8 +1,12 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+# Enable Powerlevel10k instant prompt if available
+if [ -f "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ] && [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+# Load Powerlevel10k theme if installed
+if [ -f "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ]; then
+  source "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme"
+fi
 
 if type brew &>/dev/null
 then
@@ -12,7 +16,10 @@ then
   compinit
 fi
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load Powerlevel10k configuration if it exists and the theme is installed
+if [ -f "$(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" ] && [ -f ~/.p10k.zsh ]; then
+  source ~/.p10k.zsh
+fi
 
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -27,8 +34,14 @@ bindkey '^[[B' history-search-forward
 bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Load zsh plugins if they exist
+if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 alias ls='ls -lrth --color=auto'
 alias ll='ls'
@@ -40,13 +53,22 @@ alias reload-zsh='source ~/.zshrc'
 alias edit-zsh='code ~/.zshrc'
 alias edit-kubeconfig='code ~/.kube/config'
 
-export GOPATH=$HOME/go
-export GOROOT=/opt/homebrew/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+# Go configuration - only if Go is installed
+if [ -d "/opt/homebrew/opt/go/libexec" ]; then
+  export GOPATH=$HOME/go
+  export GOROOT=/opt/homebrew/opt/go/libexec
+  export PATH=$PATH:$GOPATH/bin
+  export PATH=$PATH:$GOROOT/bin
+fi
 
-export PATH=$PATH:$(brew --prefix rustup)/bin
+# Rust configuration - only if Rustup is installed
+if brew --prefix rustup &>/dev/null; then
+  export PATH=$PATH:$(brew --prefix rustup)/bin
+fi
 
-. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+# Source Nix configuration only if it exists
+if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fi
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
