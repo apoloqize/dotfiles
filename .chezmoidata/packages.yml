@@ -1,5 +1,7 @@
 packages:
   darwin:
+    taps:
+    - 'siderolabs/tap'
     brews:
     - 'act'
     - 'ansible'
@@ -29,7 +31,7 @@ packages:
     - 'rustup'
     - 'siderolabs/tap/sidero-tools'
     - 'sshpass'
-    - 'talosctl'
+    - 'siderolabs/tap/talosctl'
     - 'tmux'
     - 'tree'
     - 'uv'
