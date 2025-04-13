@@ -1,7 +1,5 @@
 packages:
   darwin:
-    taps:
-    - 'siderolabs/tap'
     brews:
     - 'act'
     - 'ansible'
