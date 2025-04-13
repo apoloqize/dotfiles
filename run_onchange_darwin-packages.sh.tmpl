@@ -9,7 +9,7 @@ installed_casks=$(brew list --cask)
 is_mac_mini=$(sysctl -n hw.model | grep -q "^Macmini" && echo "true" || echo "false")
 
 # Install missing formulae and casks
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew "{{ . }}"
 {{ end -}}
