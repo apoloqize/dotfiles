@@ -8,6 +8,12 @@ installed_casks=$(brew list --cask)
 # Check if the current machine is a Mac Mini
 is_mac_mini=$(sysctl -n hw.model | grep -q "^Macmini" && echo "true" || echo "false")
 
+# Add taps
+{{ range .packages.darwin.taps -}}
+echo "Adding tap: {{ . }}"
+brew tap {{ . }}
+{{ end -}}
+
 # Install missing formulae and casks
 brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
