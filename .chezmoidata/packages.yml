@@ -1,5 +1,7 @@
 packages:
   darwin:
+    taps:
+      - 'siderolabs/tap'
     brews:
     - 'act'
     - 'ansible'
@@ -23,11 +25,14 @@ packages:
     - 'minio-mc'
     - 'neovim'
     - 'node'
+    - 'omnictl'
     - 'opentofu'
     - 'powerlevel10k'
     - 'ripgrep'
     - 'rustup'
+    - 'sidero-tools'
     - 'sshpass'
+    - 'talosctl'
     - 'tmux'
     - 'tree'
     - 'uv'
