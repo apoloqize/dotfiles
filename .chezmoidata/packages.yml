@@ -31,7 +31,6 @@ packages:
     - 'rustup'
     - 'sidero-tools'
     - 'sshpass'
-    - 'talosctl'
     - 'tmux'
     - 'tree'
     - 'uv'
