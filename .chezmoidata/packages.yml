@@ -29,7 +29,6 @@ packages:
     - 'powerlevel10k'
     - 'ripgrep'
     - 'rustup'
-    - 'sidero-tools'
     - 'sshpass'
     - 'tmux'
     - 'tree'
