@@ -47,9 +47,9 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Aliases
-alias l="ls -lrth"
-alias ll="ls -lrth"
-alias ls="ls -lrth"
+alias l="ls -lrth --color=auto"
+alias ll="ls -lrth --color=auto"
+alias ls="ls -lrth --color=auto"
 alias grep="grep --color=auto"
 alias vi="nvim"
 alias vim="nvim"
