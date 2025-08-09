@@ -8,8 +8,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     brew
-    zsh-autosuggestions
-    zsh-syntax-highlighting
 )
 
 # Oh My Zsh
@@ -62,3 +60,7 @@ killport() {
     fi
     lsof -ti:$1 | xargs kill -9
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/florent/.lmstudio/bin"
+# End of LM Studio CLI section
