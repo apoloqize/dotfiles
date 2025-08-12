@@ -17,6 +17,9 @@ source $ZSH/oh-my-zsh.sh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# thefuck - corrects your previous console command
+eval $(thefuck --alias)
+
 # History Configuration
 HISTSIZE=10000
 SAVEHIST=10000
