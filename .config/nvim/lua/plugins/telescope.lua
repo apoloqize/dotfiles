@@ -45,12 +45,36 @@
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
         defaults = {
-          theme = "dropdown",
           mappings = {
             i = {
               ['<C-n>'] = require('telescope.actions').cycle_history_next,
               ['<C-p>'] = require('telescope.actions').cycle_history_prev,
             },
+          },
+        },
+        pickers = {
+          find_files = {
+            theme = "dropdown"
+          },
+          live_grep = {
+            theme = "ivy"
+          },
+          buffers = {
+            theme = "cursor"
+          },
+          help_tags = {
+            layout_strategy = "vertical",
+            layout_config = {
+              width = 0.9,
+              height = 0.9,
+            }
+          },
+          oldfiles = {
+            layout_strategy = "center",
+            layout_config = {
+              width = 0.6,
+              height = 0.6,
+            }
           },
         },
         extensions = {
