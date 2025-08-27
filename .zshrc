@@ -54,6 +54,8 @@ alias ls="ls -lrth --color=auto"
 alias grep="grep --color=auto"
 alias vi="nvim"
 alias vim="nvim"
+alias terraform="tofu"
+alias tf="tofu"
 
 # Find and kill process by name
 killport() {
