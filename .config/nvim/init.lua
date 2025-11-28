@@ -4,6 +4,9 @@ vim.o.scrolloff = 10
 
 require("config.lazy")
 
+-- Colorscheme
+vim.cmd.colorscheme("gruvbox-material")
+
 -- Keybindings
 -- Toggle Oil file explorer
 local function toggle_oil()
