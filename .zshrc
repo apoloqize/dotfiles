@@ -69,3 +69,8 @@ killport() {
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/florent/.lmstudio/bin"
 # End of LM Studio CLI section
+
+# Rustup (if installed via Homebrew)
+if [ -d "$(brew --prefix rustup)/bin" ]; then
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
+fi
