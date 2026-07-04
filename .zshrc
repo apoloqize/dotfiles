@@ -66,6 +66,7 @@ killport() {
     lsof -ti:$1 | xargs kill -9
 }
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/florent/.lmstudio/bin"
-# End of LM Studio CLI section
+# Hermes Agent — ensure ~/.local/bin is on PATH
+export PATH="$HOME/.local/bin:$PATH"
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+export PATH="$(brew --prefix rustup)/bin:$PATH"
